@@ -1,7 +1,10 @@
 #!/bin/sh
 
+set -e
+
 PDIR=`pwd`
 rm -rf /tmp/${PNAME}
-mkdir /tmp/${PNAME} && cp -r . /tmp/${PNAME} && \
-cd /tmp && (find ${PNAME}/ -name .svn | xargs rm -rf) && \
+mkdir /tmp/${PNAME} && cp -r . /tmp/${PNAME}
+cd /tmp
+rm -rf .git
 tar fcz "${PDIR}/../${PNAME}_${VER}.tar.gz" ${PNAME}
