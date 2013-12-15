@@ -3,6 +3,7 @@
 set -e
 
 pwd
+git log HEAD^..
 ls -al
 cd ..
 ls -al
