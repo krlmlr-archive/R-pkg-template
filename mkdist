@@ -6,4 +6,4 @@ pwd
 ls -al
 cd ..
 ls -al
-R CMD build ${PNAME}
+R CMD build R-pkg-template
